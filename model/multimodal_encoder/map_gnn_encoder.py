@@ -21,7 +21,6 @@ import pickle
 class SMARTMapDecoder(nn.Module):
 
     def __init__(self,
-                 dataset: str,
                  input_dim: int,
                  hidden_dim: int,
                  num_historical_steps: int,
@@ -35,7 +34,6 @@ class SMARTMapDecoder(nn.Module):
                  map_token: Dict = None,  # This should be a dictionary containing map token data
                  map_token_traj_path: str = None) -> None:
         super(SMARTMapDecoder, self).__init__()
-        self.dataset = dataset
         self.input_dim = input_dim      # 2
         self.hidden_dim = hidden_dim    # 128
         self.num_historical_steps = num_historical_steps
